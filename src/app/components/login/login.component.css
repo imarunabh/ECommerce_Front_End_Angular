@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C850C0;
+    background-image: linear-gradient(135deg, #C850C0 22%, #8870ff 49%);
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 50%;
+    border-radius: 20px;
+    background-color: #322D2D;
+    color: #fff;
+    padding: 20px;
+}
+
+/* .form-title {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Center form content */
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width to align elements */
+    margin-top: 20px;
+    position: relative;
+}
+
+.form-field label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%; /* Full width input */
+    height: 40px;
+    padding: 5px 10px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+span {
+    font-size: 0.9rem;
+    color: #ff4444; /* Error message color */
+    margin-top: 3px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+

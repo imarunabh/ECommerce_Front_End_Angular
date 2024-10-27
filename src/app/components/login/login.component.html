@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <h1 class="form-title">Login</h1>
+            <form class="login-form" [formGroup]="loginForm">
+               
+                <div appearance="outline" class="form-field">
+                    <label>Email</label>
+                    
+                    <input matInput type="email" placeholder="Enter Email" formControlName="email"/>
+                    <span *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">This Input is Required!</span>
+
+                    <span *ngIf="loginForm.get('email')?.hasError('required') &&loginForm.get('email').touched">Please enter a valid email address</span>
+                
+                </div>
+    
+                <div appearance="outline" class="form-field">
+                    <label>Password</label>
+                    
+                    <input matInput type="password" placeholder="Password" formControlName="password"/>
+                    <span *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password').touched">This Input is Required!</span>
+                </div>
+                <button class="btn" [ngStyle]="{'background-color':buttondisabled()}"  color="primary" (click)="login()" [disabled]="loginForm.invalid">Login</button>
+    
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
